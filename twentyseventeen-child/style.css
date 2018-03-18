@@ -11,3 +11,20 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twenty-seventeen-child
 */
+
+div.app-contact-main-box {font-family: Arial; text-align: left}
+.app-contact-main-box p {margin: 0;}
+.app-contact-main-box a:link, a:active, a:visited {
+   color: white;
+}
+.app-contact-text-box {
+   width: 340px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 20px;
+   padding: 10px;
+  -moz-border-radius: 15px;
+   border-radius: 15px;
+   background-color: #003873;
+   color: white;
+}
