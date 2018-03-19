@@ -14,7 +14,7 @@
 
 div.app-contact-main-box {font-family: Arial; text-align: left}
 .app-contact-main-box p {margin: 0;}
-.app-contact-main-box a:link, a:active, a:visited {
+.app-contact-main-box a:link, .app-contact-main-box a:active, .app-contact-main-box a:visited {
    color: white;
 }
 .app-contact-text-box {
