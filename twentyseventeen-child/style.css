@@ -12,6 +12,23 @@
  Text Domain:  twenty-seventeen-child
 */
 
+/* Hide the page title */
+.page .entry-header { display: none; }
+
+/* Redefine content with for large screens */
+@media screen and (min-width: 48em) {
+   body.page-two-column:not(.archive) #primary .entry-content
+    {
+      width: 94%; /*was: 58%*/
+    }
+   body.page-two-column:not(.archive) #primary .entry-header
+    {
+      width: 0px; /*was: 36%*/
+    }
+}
+
+/* START Styles for pages which are displayed in the mobile apps*/
+
 div.app-contact-main-box {font-family: Arial; text-align: left}
 .app-contact-main-box p {margin: 0;}
 .app-contact-main-box a:link, .app-contact-main-box a:active, .app-contact-main-box a:visited {
@@ -28,3 +45,5 @@ div.app-contact-main-box {font-family: Arial; text-align: left}
    background-color: #003873;
    color: white;
 }
+
+/* END Styles for pages which are displayed in the mobile apps*/
