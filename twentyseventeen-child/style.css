@@ -29,9 +29,14 @@
 
 /* START Styles for pages which are displayed in the mobile apps*/
 
-div.app-contact-main-box {font-family: Arial; text-align: left}
-.app-contact-main-box p {margin: 0;}
-.app-contact-main-box a:link, .app-contact-main-box a:active, .app-contact-main-box a:visited {
+div.app-content-main-box {
+  font-family: Arial;
+  text-align: left;
+  margin: 1em;
+}
+.app-content-main-box p {margin: 0;}
+.app-content-main-box ul {list-style-position: inside;}
+.app-content-main-box a:link, .app-content-main-box a:active, .app-content-main-boxs a:visited {
    color: white;
 }
 .app-contact-text-box {
