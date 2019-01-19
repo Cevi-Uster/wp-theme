@@ -16,6 +16,7 @@
 .page .entry-header { display: none; }
 
 /* Redefine content with for large screens */
+
 @media screen and (min-width: 48em) {
    body.page-two-column:not(.archive) #primary .entry-content
     {
@@ -27,8 +28,93 @@
     }
 }
 
-/* START Styles for pages which are displayed in the mobile apps*/
+/* Redefine header image height on front page */
 
+/* Front Page */
+
+.twentyseventeen-front-page.has-header-image .site-branding,
+.twentyseventeen-front-page.has-header-video .site-branding,
+.home.blog.has-header-image .site-branding,
+.home.blog.has-header-video .site-branding {
+	margin-bottom: 70px;
+}
+
+.twentyseventeen-front-page.has-header-image .custom-header-media,
+.twentyseventeen-front-page.has-header-video .custom-header-media,
+.home.blog.has-header-image .custom-header-media,
+.home.blog.has-header-video .custom-header-media {
+	height: 1200px;
+	height: 50vh;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+.twentyseventeen-front-page.has-header-image .custom-header-media:before,
+.twentyseventeen-front-page.has-header-video .custom-header-media:before,
+.home.blog.has-header-image .custom-header-media:before,
+.home.blog.has-header-video .custom-header-media:before {
+	height: 33%;
+}
+
+.admin-bar.twentyseventeen-front-page.has-header-image .custom-header-media,
+.admin-bar.twentyseventeen-front-page.has-header-video .custom-header-media,
+.admin-bar.home.blog.has-header-image .custom-header-media,
+.admin-bar.home.blog.has-header-video .custom-header-media {
+	height: calc(50vh - 32px);
+}
+
+.panel-content .wrap {
+	padding-bottom: 4.5em;
+	padding-top: 6em;
+}
+
+.panel-image {
+	height: 100vh;
+	max-height: 1200px;
+}
+
+/* With panel images 100% of the screen height, we're going to fix the background image where supported to create a parallax-like effect. */
+.background-fixed .panel-image {
+	background-attachment: fixed;
+}
+
+.page-two-column .panel-content .entry-header {
+	float: left;
+	width: 36%;
+}
+
+.page-two-column .panel-content .entry-content {
+	float: right;
+	width: 58%;
+}
+
+@media screen and (min-width: 48em) {
+	.twentyseventeen-front-page.has-header-image .custom-header-image {
+	height: 50vh;
+	}
+}
+
+/* Mobile screen*/
+.has-header-image.twentyseventeen-front-page .custom-header {
+	height: 50vh;
+}
+
+.admin-bar.twentyseventeen-front-page.has-header-image .custom-header-image {
+	height: calc(50vh - 32px);
+}
+
+/* Computer screen with logged in user and admin bar showing on front end*/
+@media screen and (min-width: 48em) {
+	.admin-bar.twentyseventeen-front-page.has-header-image .custom-header-image {
+	height: calc(50vh - 32px);
+	}
+}
+
+.custom-header-media::before {
+	display: none;
+}
+
+/* START Styles for pages which are displayed in the mobile apps*/
 div.app-content-main-box {
   font-family: Arial;
   text-align: left;
@@ -50,5 +136,4 @@ div.app-content-main-box {
    background-color: #003873;
    color: white;
 }
-
 /* END Styles for pages which are displayed in the mobile apps*/
