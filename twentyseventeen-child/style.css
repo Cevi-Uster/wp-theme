@@ -73,6 +73,14 @@
 	max-height: 1200px;
 }
 
+/* Footer */
+.FooterBlock {
+	display: block;
+}
+#LogoGefoerdertDurchStadtUster {
+	float: right;
+} 
+
 /* With panel images 100% of the screen height, we're going to fix the background image where supported to create a parallax-like effect. */
 .background-fixed .panel-image {
 	background-attachment: fixed;
