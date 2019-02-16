@@ -20,7 +20,7 @@
 @media screen and (min-width: 48em) {
    body.page-two-column:not(.archive) #primary .entry-content
     {
-      width: 94%; /*was: 58%*/
+      width: 100%; /*was: 58%*/
     }
    body.page-two-column:not(.archive) #primary .entry-header
     {
@@ -79,7 +79,7 @@
 }
 #LogoGefoerdertDurchStadtUster {
 	float: right;
-} 
+}
 
 /* With panel images 100% of the screen height, we're going to fix the background image where supported to create a parallax-like effect. */
 .background-fixed .panel-image {
@@ -93,7 +93,7 @@
 
 .page-two-column .panel-content .entry-content {
 	float: right;
-	width: 58%;
+	width: 100%;
 }
 
 @media screen and (min-width: 48em) {
