@@ -5,7 +5,7 @@
  Author:       Marc Baumgartner v/o Simba
  Author URI:   https://www.mabaka.ch
  Template:     twentyseventeen
- Version:      1.0.1
+ Version:      1.0.2
  License:      MIT License
  License URI:  https://opensource.org/licenses/MIT
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -26,6 +26,11 @@
     {
       width: 0px; /*was: 36%*/
     }
+}
+
+/* Space an Seiten-Header verkleinern, S. Göldi 6.3.19 */
+.site-content {
+	padding-top: 1em;
 }
 
 /* Redefine header image height on front page */
@@ -78,7 +83,10 @@
 	display: block;
 }
 #LogoGefoerdertDurchStadtUster {
-	float: right;
+	  float: right;
+    width: 30%;
+    padding-top: 5px;
+    padding-bottom: 20px;
 }
 .site-footer .widget-column.footer-widget-1 {
 	float: none;
