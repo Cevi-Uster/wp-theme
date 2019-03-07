@@ -8,4 +8,15 @@ function my_theme_enqueue_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+// Diese folgende Funktion braucht es für das Kontaktformular, damit die Empfängeradresse
+// im Shortcode mitgegeben werden kann. Doku: http://bit.ly/2TZgN79
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
+function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
+    $my_attr = 'destination-email';
+    if ( isset( $atts[$my_attr] ) ) {
+        $out[$my_attr] = $atts[$my_attr];
+    }
+    return $out;
+}
 ?>
