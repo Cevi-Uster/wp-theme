@@ -21,13 +21,29 @@ function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
     return $out;
 }
 
-/* Workaround for agenda bug */
-
+/* 
+    Workaround for agenda bug
+ 
+*/
 add_action("wp_footer", function(){
     if(is_page('agenda')){
         echo '<script>jQuery(function($){if($("#tribe-events").length){$("#tribe-events").data("featured",1);}});</script>';
     }
  });
+ 
 
+/* 
+    Disable cookie warnings for pages with custom field no_cookie_warning=true
+*/
+ function custom_cn_cookie_notice_output($output) {
 
+    $url = 'http://' . $_SERVER[ 'HTTP_HOST' ] . $_SERVER[ 'REQUEST_URI' ];
+    $current_post_id = url_to_postid( $url );
+    $no_cookie_warning = get_post_meta($current_post_id, 'no_cookie_warning', true);
+    if (strtolower($no_cookie_warning) == "true"){
+        $output = '';
+    }
+	return $output;
+}
+add_filter('cn_cookie_notice_output', 'custom_cn_cookie_notice_output')
 ?>
