@@ -1,11 +1,11 @@
-﻿/*
+/*
  Theme Name:   Twenty Seventeen Child
  Theme URI:    https://github.com/Cevi-Uster/wp-theme/twentyseventeen-child/
  Description:  Twenty Seventeen Child Theme
  Author:       Marc Baumgartner v/o Simba
  Author URI:   https://www.mabaka.ch
  Template:     twentyseventeen
- Version:      1.3.0
+ Version:      1.4.0
  License:      MIT License
  License URI:  https://opensource.org/licenses/MIT
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -28,15 +28,33 @@
     }
 }
 
+/* Header Bilder werden mit 100% Bildhöhe angezeigt M.Kunz 22.4.21 */
+.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+  height: unset;
+
+}
+.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-video .custom-header-media iframe {
+  min-height: unset;
+}
+
+.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+  height: unset;
+}
+
+.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+  min-height: unset;
+}
+
 /* Space an Seiten-Header verkleinern, S. Göldi 6.3.19 */
 .site-content {
 	padding-top: 2em;
 }
 
 /* Abstände Titel und Seitenheader,S. Göldi 19.03.19 */
-h1, h2, h3, h4, h5, h6 {    
+h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5em;
-    padding: 0.5em 0 0;        
+    padding: 0.5em 0 0;
+    padding: 0.5em 0 0;
 }
 
 /* Redefine header image height on front page */
